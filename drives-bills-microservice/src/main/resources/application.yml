@@ -1,0 +1,21 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+  kafka:
+    consumer:
+      group-id: "customer-group-2"
+topic:
+  name: topic.driver.buy.car
+  name-1: topic.add.detail
+
